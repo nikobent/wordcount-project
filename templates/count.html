@@ -1,0 +1,17 @@
+<h1> COUNT</h1>
+<a href="{%url 'homepage'%}"> Start again </a>
+<h2> Your text: </h2>
+{{ fulltext }}
+
+<h2> It has {{count}} words </h2>
+
+{% for word, counttotal in wordcount %}
+
+{{word}} appeared {{counttotal}} 
+{% ifequal counttotal  1 %}
+time
+{%else%}
+times
+{%endifequal%}
+</br>
+{% endfor %}
